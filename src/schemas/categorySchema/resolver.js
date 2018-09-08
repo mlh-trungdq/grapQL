@@ -12,8 +12,7 @@ export const resolver = {
         deleteCategory(root, { id }) {
             return categoryModel.deleteCategory(id);
         },
-        updateCategory(root, { id, input: { inputCategory } }) {
-            console.log(inputCategory)
+        updateCategory(root, { id, input: inputCategory }) {
             if (id) {
                 return categoryModel.updateCategory(id, inputCategory);
             }
